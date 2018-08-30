@@ -3,6 +3,7 @@ import 'package:todo/data/task.dart';
 import 'package:todo/ui/addedittask.dart';
 import 'package:todo/ui/statistics.dart';
 import 'package:todo/ui/tasks.dart';
+import 'package:todo/utils.dart';
 
 final tasksKey = GlobalKey<TasksFragmentState>();
 
@@ -39,9 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     _fab = FloatingActionButton(
       onPressed: () {
-        Navigator
-            .of(context)
-            .push(MaterialPageRoute(builder: (_) => AddEditTaskPage(Task())));
+        Navigator.of(context).push(SlideRoute(AddEditTaskPage(Task())));
       },
       tooltip: 'Increment',
       child: Icon(Icons.add),

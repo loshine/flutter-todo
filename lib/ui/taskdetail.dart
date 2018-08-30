@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo/data/localdatasource.dart';
 import 'package:todo/data/task.dart';
 import 'package:todo/ui/addedittask.dart';
+import 'package:todo/utils.dart';
 
 class TaskDetailPage extends StatefulWidget {
   final Task task;
@@ -57,8 +58,7 @@ class _TaskDetailPageState extends State<TaskDetailPage> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.edit),
         onPressed: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => AddEditTaskPage(widget.task)));
+          Navigator.of(context).push(SlideRoute(AddEditTaskPage(widget.task)));
         },
       ),
     );

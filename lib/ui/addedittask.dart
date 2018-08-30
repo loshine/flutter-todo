@@ -16,8 +16,7 @@ class AddEditTaskPage extends StatefulWidget {
 class _AddEditTaskPageState extends State<AddEditTaskPage> {
   _maybeSave(BuildContext context) async {
     if (widget.task.title == null || widget.task.title.isEmpty) {
-      Scaffold
-          .of(context)
+      Scaffold.of(context)
           .showSnackBar(SnackBar(content: Text('Title must not be empty.')));
     } else {
       var dataSource = LocalDataSource();

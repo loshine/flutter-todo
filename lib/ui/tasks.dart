@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:todo/data/localdatasource.dart';
 import 'package:todo/data/task.dart';
 import 'package:todo/ui/taskdetail.dart';
+import 'package:todo/utils.dart';
 
 class TasksFragment extends StatefulWidget {
   TasksFragment({Key key}) : super(key: key);
@@ -178,8 +179,7 @@ class _ListItemState extends State<_ListItem> {
       color: widget.task.completed ? Colors.grey[400] : Colors.transparent,
       child: ListTile(
         onTap: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => TaskDetailPage(widget.task)));
+          Navigator.of(context).push(SlideRoute(TaskDetailPage(widget.task)));
         },
         leading: Checkbox(
           value: widget.task.completed,
