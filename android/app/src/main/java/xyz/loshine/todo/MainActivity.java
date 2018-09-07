@@ -1,4 +1,4 @@
-package com.example.todo;
+package xyz.loshine.todo;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
